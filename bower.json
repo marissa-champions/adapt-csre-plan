@@ -1,0 +1,19 @@
+{
+    "name": "adapt-walkgrove-actionplan",
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/walkgrovedev/adapt-walkgrove-actionplan.git"
+    },
+    "framework": "5",
+    "version": "1.0.0",
+    "homepage": "https://github.com/walkgrovedev/adapt-walkgrove-actionplan.git",
+    "component": "actionplan",
+    "displayName": "Action Plan",
+    "description": "A component which allows text entry and saving to PDF",
+    "main": "/js/adapt-walkgrove-actionplan.js",
+    "keywords": [
+        "adapt-plugin",
+        "adapt-component"
+    ],
+    "license": "GPL-3.0"
+}
