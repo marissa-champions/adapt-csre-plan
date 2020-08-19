@@ -12,6 +12,28 @@
         width: 100%;
     }
 
+    &__buttons {
+        display: none;
+
+        &.is-visible {
+            display: flex;
+        }
+    }
+
+    &__message {
+        display: none;
+        color: @primary-colour;
+        font-weight: bold;
+
+        &.is-visible {
+            display: flex;
+        }
+    }
+
+    &__pdf-content {
+        display: none;
+    }
+
     input[type=text]  {
         padding: 1rem;
         margin: 1rem 0;
