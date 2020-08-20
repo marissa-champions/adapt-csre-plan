@@ -37,40 +37,69 @@ define([
       require(['https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.0.0/jspdf.umd.js'], ({ jsPDF }) => {
         const doc = new jsPDF();
         
-        doc.setTextColor(98, 166, 10);
-        doc.setFontSize(22);
-        doc.text("Your action plan checklist", 95, 20, { align: 'center', maxWidth: 180 });
-
+        let yPos = 10;
+        const leftPos = 10;
+        const centerPos = 100;
+        const maxWidth = 190;
+        const bottomPos = 290;
+        
         const d = new Date();
         const dateToday = '' + d.getDate() + (d.getMonth() + 1) + d.getFullYear() + '';
         const dateToShow = '' + d.getDate() + '/' + (d.getMonth() + 1) + '/' + d.getFullYear() + '';
 
+        const pdfImage = this.$('.actionplan__pdf-image').html();
+        doc.addImage(pdfImage, 'png', leftPos, yPos, maxWidth, 53, '', 'none', 0);
+        yPos += 73;
+        
+        doc.setTextColor(0, 0, 0);
+        doc.setFontSize(22);
+        doc.setFont("helvetica", "bold");
+        const pdfTitle = this.$('.actionplan__pdf-title').html();
+        doc.text(pdfTitle, centerPos, yPos, { align: 'center', maxWidth: maxWidth });
+        yPos += 20;
+
+        doc.setTextColor(98, 166, 10);
+        doc.setFontSize(22);
+        doc.setFont("helvetica", "normal");
+        const pdfSubTitle = this.$('.actionplan__pdf-subtitle').html();
+        doc.text(pdfSubTitle, centerPos, yPos, { align: 'center', maxWidth: maxWidth });
+        yPos += 20;
+          
+        doc.setTextColor(0, 0, 0);
+        doc.setFontSize(18);
+        doc.setFont("helvetica", "bold");
+        const pdfContentTitle = this.$('.actionplan__pdf-contenttitle').html();
+        doc.text(pdfContentTitle, centerPos, yPos, { align: 'center', maxWidth: maxWidth });
+        yPos += 10;
+
         doc.setDrawColor(0);
         doc.setFillColor(98, 166, 10);
-        doc.rect(10, 32, 180, 1, "F");
+        doc.rect(leftPos, yPos, maxWidth, 1, "F");
+        yPos += 15;
 
         doc.setTextColor(0, 0, 0);
         doc.setFontSize(13);
+        doc.setFont("helvetica", "normal");
         const pdfBody = this.$('.actionplan__pdf-content').html();
-        doc.text(pdfBody, 95, 50, { align: 'center', maxWidth: 180 });
-
-        let yPos = 75;
+        doc.text(pdfBody, centerPos, yPos, { align: 'center', maxWidth: maxWidth });
+        yPos += 20;
+        
         for( var intItem in this.model.get( '_items' ) ) {
           doc.setTextColor(98, 166, 10);
           doc.setFont("helvetica", "bold");
           let textTitle = this.$('.actionplan__item-title').eq(intItem).html();
-          doc.text(textTitle, 10, yPos, { align: 'left', maxWidth: 180 });
+          doc.text(textTitle, leftPos, yPos, { align: 'left', maxWidth: maxWidth });
           yPos += 10;
 
           doc.setTextColor(0, 0, 0);
           doc.setFont("helvetica", "normal");
           let textAction = this.$('.actionplan__item-textbox').eq(intItem).val();
-          doc.text(textAction, 10, yPos, { align: 'left', maxWidth: 180 });
+          doc.text(textAction, leftPos, yPos, { align: 'left', maxWidth: maxWidth });
           yPos += 25;
         };
 
         doc.setFont("helvetica", "italic");
-        doc.text(dateToShow, 95, 290, { align: 'center', maxWidth: 180 });
+        doc.text(dateToShow, centerPos, bottomPos, { align: 'center', maxWidth: maxWidth });
 
         doc.save("your-action-plan-checklist-" + dateToday + ".pdf");
       });

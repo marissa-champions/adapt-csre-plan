@@ -19,9 +19,25 @@
     {{{message}}}
   </div>
 
-  <div class="actionplan__pdf-content">
-    {{{pdf}}}
+  {{#each pdf}}
+  <div class="actionplan__pdf">
+    <div class="actionplan__pdf-image">
+      {{{image}}}
+    </div>
+    <div class="actionplan__pdf-title">
+      {{{title}}}
+    </div>
+    <div class="actionplan__pdf-subtitle">
+      {{{subTitle}}}
+    </div>
+    <div class="actionplan__pdf-contenttitle">
+      {{{contentTitle}}}
+    </div>
+    <div class="actionplan__pdf-content">
+      {{{content}}}
+    </div>
   </div>
+  {{/each}}
 
   </div>
 
