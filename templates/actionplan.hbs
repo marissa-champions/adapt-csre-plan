@@ -5,7 +5,7 @@
   {{#each _items}}
     <div class="actionplan__widget">
       <div class="actionplan__item-title">{{{title}}}</div>
-      <input class="actionplan__item-textbox js-actionplan-textbox" type="text" size="250" maxlength="255" placeholder="{{{../placeholder}}}" data-id="input-{{@index}}" id="input-{{@index}}" aria-labelledby="input-{{@index}}-aria" value="">
+      <input class="actionplan__item-textbox js-actionplan-textbox" type="text" size="250" maxlength="255" placeholder="{{{../placeholder}}}" data-id="input-{{@index}}" id="input-{{@index}}" aria-label="{{{title}}} input" value="">
     </div>
   {{/each}}
 
