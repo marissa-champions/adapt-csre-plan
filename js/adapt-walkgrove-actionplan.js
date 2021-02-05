@@ -2,9 +2,8 @@
 define([
   'core/js/adapt',
   'core/js/views/componentView',
-  'core/js/models/componentModel',
-  'core/js/models/fontModel'
-], function(Adapt, ComponentView, ComponentModel, FontModel) {
+  'core/js/models/componentModel'
+], function(Adapt, ComponentView, ComponentModel) {
   
   var ActionPlanView = ComponentView.extend({
 
