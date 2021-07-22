@@ -58,8 +58,7 @@
             "required": true,
             "default": "",
             "title": "Image base URL",
-            "inputType": "Text",
-            "validators": [],
+            "inputType": "Asset:image",
             "help": "",
             "translatable": true
           },
