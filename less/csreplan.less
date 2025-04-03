@@ -1,8 +1,5 @@
-.actionplan {
+.csreplan {
 
-    &__main {
-
-    }
 
     &__item-title {
         font-weight: bold;
@@ -19,10 +16,18 @@
             display: flex;
         }
     }
+    &__btn {
+        padding: 10px;
+        border-radius: 3px;
+        &:hover {
+            background-color:#004990;
+            color:#ffffff;
+        }
+    }
 
     &__message {
         display: none;
-        color: @primary-colour;
+        color: @item-color;
         font-weight: bold;
 
         &.is-visible {

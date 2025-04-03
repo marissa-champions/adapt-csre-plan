@@ -1,0 +1,50 @@
+<div class="component__inner csreplan__inner">
+  {{> component this}}
+
+  <div class="csreplan__main">
+    {{#each _items}}
+    <div class="csreplan__widget">
+      <div class="csreplan__item-title">{{title}}</div>
+      <textarea class="csreplan__item-textbox js-csreplan-textbox" type="text" maxlength="300"
+        placeholder="{{{../placeholder}}}" data-id="input-{{@index}}" id="input-{{@index}}"
+        aria-label="{{{title}}} input" value="" oninput="this.value = this.value.replace(/ÿ/g, '').trim();">
+      </textarea>
+    </div>
+    {{/each}}
+
+    <div class="csreplan__buttons button is-visible">
+      <button class="csreplan__btn btn js-csreplan-export-click" aria-label="{{{exportText}}}">
+        {{{exportText}}}
+      </button>
+    </div>
+
+    <div class="csreplan__message">
+      {{{message}}}
+    </div>
+
+    {{#each pdf}}
+    <div class="csreplan__pdf">
+      {{#if image}}
+      <div class="csreplan__pdf-image">
+        {{{image}}}
+      </div>
+      {{/if}}
+      <div class="csreplan__pdf-title">
+        {{title}}
+      </div>
+      <div class="csreplan__pdf-subtitle">
+        {{subTitle}}
+      </div>
+      <div class="csreplan__pdf-contenttitle">
+        {{contentTitle}}
+      </div>
+      <div class="csreplan__pdf-content">
+        {{content}}
+      </div>
+    </div>
+    {{/each}}
+
+  </div>
+
+
+</div>

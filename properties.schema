@@ -33,16 +33,28 @@
     "exportText": {
       "type": "string",
       "required": true,
+      "translatable": true,
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instruction text",
       "translatable": true
     },
     "placeholder": {
       "type": "string",
       "required": true,
+      "translatable": true,
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instruction text",
       "translatable": true
     },
     "message": {
       "type": "string",
       "required": true,
+      "translatable": true,
+      "inputType": "Text",
+      "validators": [],
+      "help": "This is the instruction text",
       "translatable": true
     },
     "pdf": {
@@ -125,7 +137,13 @@
           }
         }
       }
-    }
+    },
+    "footerText": {
+  "title": "PDF Footer Text",
+  "description": "The text displayed at the bottom of the exported PDF.",
+  "type": "string",
+  "default": "Footer"
+}
 
   }
 }

@@ -1,36 +1,32 @@
-    {
-        "_id": "c-05",
-        "_parentId": "b-05",
-        "_type": "component",
-        "_component": "actionplan",
-        "_classes": "",
-        "_layout": "left",
-        "title": "Our first look at a component",
-        "displayTitle": "Our first look at a component",
-        "body": "This component you're reading is a text component. All components take this form of a title and body - except a blank component. However it's important to realise that title and body attributes are not needed. <br><br>Take for instance the media component opposite or below on a smaller device - has no body attribute. Instead of the HTML being rendered Adapt simply doesn't render it. The title attribute is simply a break tag to push the media component level with the opposite component.",
-        "instruction": "",
-        "exportText": "Save as PDF",
-        "placeholder": "Identified action",
-        "message": "You've saved your actions.",
-        "pdf": [{
-            "image": "data:image/jpeg;base64,/...",
-            "title": "Title",
-            "subTitle": "Subtitle",
-            "contentTitle": "Content title",
-            "content": "Content:"
-        }],
-        "_items": [
-            {
-                "title": "Action 1"
-            },
-            {
-                "title": "Action 2"
-            },
-            {
-                "title": "Action 3"
-            }
-        ],
-        "_pageLevelProgress": {
-            "_isEnabled": true
+{
+    "_id": "c-05",
+    "_parentId": "b-05",
+    "_type": "component",
+    "_component": "csreplan",
+    "_classes": "",
+    "_layout": "left",
+    "title": "Our first look at a component",
+    "displayTitle": "Our first look at a component",
+    "body": "This component you're reading is a text component. All components take this form of a title and body - except a blank component. However it's important to realise that title and body attributes are not needed. <br><br>Take for instance the media component opposite or below on a smaller device - has no body attribute. Instead of the HTML being rendered Adapt simply doesn't render it. The title attribute is simply a break tag to push the media component level with the opposite component.",
+    "instruction": "",
+    "exportText": "Save as PDF",
+    "placeholder": "Identified action",
+    "message": "You've saved your actions.",
+    "footerText": "Copyright®",
+    "pdf": {
+        "image": "course/en/images/pdf-header-logo.png"
+    },
+    "subtitle": "Subtitle",
+    "contentTitle": "Content title",
+    "_items": [
+        {
+            "title": "Action 1"
+        },
+        {
+            "title": "Action 2"
+        },
+        {
+            "title": "Action 3"
         }
-    }
+    ]
+}
