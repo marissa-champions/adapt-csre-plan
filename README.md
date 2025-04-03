@@ -1,8 +1,8 @@
-# Adapt CSRE Plan Plugin
+# CSRE Plan
 
 This is a custom plugin for the [Adapt Learning](https://www.adaptlearning.org/) framework, developed and maintained by Champions School of Real Estate.
 
-## 🧩 About
+## About
 
 The `adapt-csre-plan` plugin was originally based on the now-unavailable Walkgrove `actionplan` plugin. Over time, it has been significantly customized and extended to meet the specific needs of Champions School of Real Estate.
 
@@ -27,23 +27,3 @@ Because of these changes, this version is not intended as a drop-in replacement 
 **contentTitle** (string): Optional section title that can be displayed within the PDF layout, typically above the user input areas.
 
 ---
-
-### Example usage
-
-```json
-{
-  "_component": "csre-plan",
-  "_id": "my-plan",
-  "title": "My Action Plan",
-  "subtitle": "Prepared Just for You",
-  "contentTitle": "Learning Objectives",
-  "footerText": "© 2025 My Company Name",
-  "pdf": {
-    "image": "course/en/images/pdf-header-logo.png"
-  },
-  "_items": [
-    "What are your short-term goals?",
-    "What skills do you want to develop?",
-    "How will you measure success?"
-  ]
-}
